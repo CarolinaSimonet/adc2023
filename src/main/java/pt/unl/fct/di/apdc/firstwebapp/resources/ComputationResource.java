@@ -1,30 +1,17 @@
 package pt.unl.fct.di.apdc.firstwebapp.resources;
 
-import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.Clock;
-import java.time.Instant;
-import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import com.google.gson.Gson;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.POST;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-
-
-
-import com.google.cloud.tasks.v2.AppEngineHttpRequest;
-import com.google.cloud.tasks.v2.CloudTasksClient;
-import com.google.cloud.tasks.v2.HttpMethod;
-import com.google.cloud.tasks.v2.QueueName;
-import com.google.cloud.tasks.v2.Task;
-import com.google.gson.Gson;
-import com.google.protobuf.Timestamp;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Logger;
 
 
 
@@ -58,7 +45,7 @@ public class ComputationResource {
 	}
 	
 	
-	@GET
+	/*@GET
 	@Path("/compute")
 	public Response triggerExecuteComputeTask() throws IOException {
 		String projectId = "potent-galaxy-378715";
@@ -75,6 +62,6 @@ public class ComputationResource {
 			client.createTask(queuePath, taskBuilder.build());
 		}
 		return Response.ok().build();
-	}
+	}*/
 }
 
